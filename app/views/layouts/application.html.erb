@@ -29,17 +29,16 @@
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
         </li>
-        <li class="nav-text">
-        |
+        <li class="nav-item d-flex align-items-center">
+          <span class="mx-2">|</span>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/users/new">Signup</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Logout</a>
-        </li>
+
       <% else %>
-        <li class="nav-text"> Loggid in as: <%= @user["username"] %>  </li>
+        <li class="navbar-text me-3"> Logged in as: <%= @user["username"] %>  </li>
+       
         <li class="nav-item">
           <a class="nav-link" href="/logout">Logout</a>
         </li>
