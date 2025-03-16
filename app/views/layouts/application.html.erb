@@ -21,6 +21,7 @@
         <a href="/login">Login</a>
         <a href="/users/new">Signup</a>
       <% else %>
+        Logged in as:<%= @user["username"] %>
        <a href="/logout">Logout</a>
       <% end %>
     </div>
