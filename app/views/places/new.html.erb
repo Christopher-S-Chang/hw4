@@ -2,10 +2,10 @@
 <% if @user != nil %>
 
 <form action="/places" method="post">
-  <p>
-    <label for="name_input">Name</label>
-    <input type="text" name="name" id="name_input">
-  </p>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" id="name" >
+  </div>
 
 <button type="submit" class="btn btn-secondary">Save</button>
 
