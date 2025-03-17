@@ -3,10 +3,10 @@
 <form action="/entries" method="post" enctype="multipart/form-data">
   <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
 
-  <p>
-    <label for="title_input">Title</label>
-    <input type="text" name="title" id="title_input">
-  </p>
+  <div class="mb-3">
+    <label for="title_input" class="form-label">Title</label>
+    <input type="text" class="form-control" name="title" id="title_input" >
+  </div>
 
   <p>
     <label for="description_input">Description</label>

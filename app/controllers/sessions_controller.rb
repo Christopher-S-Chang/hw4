@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         redirect_to "/login"
       end
     else
-      flash[""] = "Nope"
+      flash["notice"] = "Nope"
       redirect_to "/login"
     end
   end
