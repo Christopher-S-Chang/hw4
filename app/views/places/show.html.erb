@@ -1,29 +1,31 @@
-<h1><%= @place["name"] %></h1>
+<div class ="container text-left">
+  <div class = "row mb-5">
+    <h1><%= @place["name"] %></h1>
+    <p>
+    <a class = "btn btn-outline-success btn-lg" href="/entries/new?place_id=<%= @place["id"] %>" role="button"> New Entry </a>
+    </p>
+  </div>
+</div>
 
-
-
-<p>
-<a class = "btn btn-outline-success btn-lg" href="/entries/new?place_id=<%= @place["id"] %>" role="button"> New Entry </a>
-</p>
-
-<h2>My Entries</h2>
-  <div class = "container text-center">
-  <div class= "row">
-<% for entry in @entries %>
-
-    <div class = "col-md-4">
-      <h3><%= entry["title"] %></h3>
-      <h4><%= entry["occurred_on"] %></h4>
-      
-        <% if entry.uploaded_image.attached? %>
-          <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
-       
-          
-        <% end %>
-        <p><%= entry["description"] %></p>
+  <div class = "container text-left m-2">
+    <div class = "row mb-5">
+      <h2>My Entries</h2>
     </div>
- 
-<% end %>
+    <div class= "row">
+      <% for entry in @entries %>
+
+          <div class = "col-md-4 ">
+            <h3><%= entry["title"] %></h3>
+            <h4><%= entry["occurred_on"] %></h4>
+            
+              <% if entry.uploaded_image.attached? %>
+                <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+                      
+              <% end %>
+              <p><%= entry["description"] %></p>
+          </div>
+      
+      <% end %>
    </div>
   </div>
 
